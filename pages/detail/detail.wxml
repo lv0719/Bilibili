@@ -1,0 +1,89 @@
+<view class="main">
+<!-- 公共头部 --> 
+  <MyTitle></MyTitle>
+
+  <!-- 视频详情 -->
+  <view class="video_info">
+    <!-- 视频标签 -->
+    <video src="{{videoInfo.videoSrc}}" controls></video>
+    <!--视频标题  -->
+    <view class="video_title">
+      <text>{{videoInfo.videoTitle}}</text>
+      <view class="video_img">
+        <image mode="widthFix" src="/icons/down.png" style="width:50rpx;height:50rpx;"></image>
+      </view>
+    </view>
+    <!-- 视频作者相关信息 -->
+    <view class="video_detail">
+      <!-- 作者 -->
+      <text class="author">{{videoInfo.author}}</text>
+      <!-- 播放量 -->
+      <text class="play_count">{{videoInfo.playCount}}</text>
+      <!-- 评论量 -->
+      <text class="comment_count">{{videoInfo.commentCount}}弹幕</text>
+      <!--  时间-->
+      <text class="date">{{videoInfo.date}}</text>
+    </view>
+  </view>
+
+
+  <!-- 推荐视频 -->
+  <view class="others_list">  
+    <navigator class="others_item" wx:for="{{othersList}}" wx:key="index">
+      <!-- 图片容器 -->
+      <view class="others_img_warp">
+        <image src="{{item.imgSrc}}" mode="widthFix"></image>
+      </view>
+      <!-- 视频详情 -->
+      <view class="others_info">
+        <!-- 标题 -->
+          <view class="others_title">{{item.title}}</view>
+        <!-- 播放量详情 -->
+        <view class="others_detail">
+          <!-- 播放量 -->
+          <text class="play_count">{{item.playMsg}}万次观看</text>
+          <!-- 评论量 -->
+          <text class="comment_count">{{item.commentCount}}弹幕</text>
+          <!-- 日期 -->
+          <text class="date">{{videoInfo.date}}</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+
+
+
+  <!-- 评论列表 -->
+  <view class="comment-warp">
+    <view class="comment_title">
+      评论 ({{commentData.commentTotalCount}})
+    </view>
+    <view class="comment_list">
+      <view class="comment_item" wx:for="{{commentData.commentList}}" wx:key="index">
+        <!-- 左侧 -->
+        <view class="comment_user">
+          <!-- 用户头像 -->
+          <image src="{{item.userIconSrc}}" mode="widthFix"></image>
+        </view>
+        <!-- 右侧 -->
+        <view class="comment_info">
+        <!-- 作者信息，评论日期 -->
+          <view class="comment_detail">
+            <text class="author">{{item.username}}</text>
+            <text class="date">{{item.commentDate}}</text>
+          </view>
+        <!-- 评论内容 -->
+          <view class="comment_content">
+            {{item.commentInfo}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view> 
+
+
+  <!-- 底部 -->
+  <view class="detail_bottom" style="width:100%;">
+    <text>我可是有底线的！</text>
+  </view>
+</view>

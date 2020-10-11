@@ -1,0 +1,99 @@
+/* 控制全局样式 */
+page{
+  color: #666;
+  padding: 8rpx;
+}
+
+/* 导航条样式 */
+.nav_warp{
+
+}
+.nav{
+  white-space: nowrap;
+  padding: 5rpx 0;
+}
+.nav_item{
+  padding: 20rpx 45rpx;
+  font-size: 30rpx;
+  display: inline-block;
+}
+.nav_item.active{ /* 使选中的单位下边框变色 */
+  border-bottom: 5rpx solid #836f75;
+}
+
+/* 轮播图样式 */
+
+.slides{
+  margin-top: 10rpx;
+}
+.slides swiper{
+  height: 220rpx;
+}
+.slides navigator{
+  height: 100%;
+  width: 100%;
+}
+.slides image{
+  width: 100%;
+  height: 100%;
+}
+
+
+/* 视频样式控制 */
+.video_warp{
+  display: flex;
+  flex-wrap: wrap; 
+  padding: 5rpx;
+  justify-content: space-between;
+}
+.video_item{
+  width: 48%;
+  margin-bottom: 20rpx;
+}
+.video_img{
+  position: relative;
+}
+.video_img image{
+  width: 100%;
+  border-radius: 15rpx;
+} 
+.video_img .video_info{
+  position: absolute;
+  bottom: 10rpx;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  font-size: 24rpx;
+}  
+.play_count_warp{
+  margin-bottom: 15rpx;
+}
+.play_count_warp image{
+  position: absolute;
+  left: 10rpx;
+}
+.video_comment_row image{
+  position: absolute;
+  right: 120rpx;
+}
+.video_title{
+  font-size: 28rpx;
+  color: darkolivegreen;
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; 
+
+}
+
+/* 底部样式 */
+.detail_bottom{
+  text-align: center;
+  color: #666;
+  font-size: 24rpx;
+}
